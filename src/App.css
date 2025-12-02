@@ -1,42 +1,84 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Center everything on the page */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #e8f8f5, #d4efdf);
+  font-family: Arial, sans-serif;
+}
+
+/* Wrap title + card */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+/* Dashboard Title */
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #145a32;
+  margin-bottom: 25px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
+/* Main card box */
 .card {
-  padding: 2em;
+  width: 450px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px;
+  text-align: left;
 }
 
-.read-the-docs {
-  color: #888;
+/* Section titles */
+.card h2 {
+  margin-top: 10px;
+  margin-bottom: 12px;
+  color: #1b4f72;
+  font-size: 22px;
+}
+
+/* Sensor text */
+.card p {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+/* Button container rows */
+.row {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Colors */
+.green { background: #27ae60; }
+.grey  { background: #7f8c8d; }
+.blue  { background: #3498db; }
+.red   { background: #e74c3c; }
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* Disabled state */
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
